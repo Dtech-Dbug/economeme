@@ -10,3 +10,9 @@ CREATE TABLE USERS(
     userName VARCHAR,
     email VARCHAR
 );
+
+CREATE TABLE MEMESTORAGE(
+  id SERIAL PRIMARY KEY,
+  src VARCHAR,
+  parent_id INT REFERENCES MemeCategories (category_id)
+);
