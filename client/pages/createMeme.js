@@ -4,7 +4,7 @@ import Form from "../Components/UIblocks/Form";
 const createMeme = () => {
   return (
     <>
-      <h2>react</h2>
+      <h2 style={{ textAlign: "center" }}>Share the Laughter</h2>
       <Form />
     </>
   );
