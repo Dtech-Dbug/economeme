@@ -6,6 +6,7 @@ import { signInWithPopup } from "@firebase/auth";
 import signup from "../pages/signup";
 
 import { useDispatch } from "react-redux";
+import { createUser } from "../Functions/user";
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -20,14 +21,25 @@ const Nav = () => {
 
     console.log("user", user.displayName, userIdToken.token);
 
-    dispatch({
-      type: "USER_LOGGED_IN",
-      payload: {
-        name: user.displayName,
-        email: user.email,
-        token: userIdToken.token,
-      },
-    });
+    const values = {
+      userName: user.displayName,
+      email: user.email,
+    };
+
+    createUser(values)
+      .then((res) => {
+        console.log(res);
+        dispatch({
+          type: "USER_LOGGED_IN",
+          payload: {
+            name: res.data.username,
+            email: res.data.email,
+            id: res.data.id,
+            token: userIdToken.token,
+          },
+        });
+      })
+      .catch((err) => console.log(err.message));
 
     // user.then((res) => {
     //   console.log("user signed iup-->", res);
