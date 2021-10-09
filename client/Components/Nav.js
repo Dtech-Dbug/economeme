@@ -3,7 +3,6 @@ import styles from "../styles/Home.module.css";
 import SecondaryBtn from "./UIblocks/SecondaryBtn";
 import { auth, Provider } from "../firebase";
 import { signInWithPopup } from "@firebase/auth";
-import signup from "../pages/signup";
 
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
