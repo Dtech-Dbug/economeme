@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import SignUp from "../Components/SignUp";
 import PrimaryBtn from "../Components/UIblocks/PrimaryBtn";
 import SecondaryBtn from "../Components/UIblocks/SecondaryBtn";
 import styles from "../styles/Home.module.css";
