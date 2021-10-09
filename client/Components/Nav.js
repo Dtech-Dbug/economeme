@@ -5,7 +5,7 @@ import SecondaryBtn from "./UIblocks/SecondaryBtn";
 const Nav = () => {
   return (
     <nav className={styles.nav}>
-      <h2>SignUp/Login to upload your memes</h2>
+      <h2>SignUp/SignIn to upload your memes</h2>
 
       <ul>
         <li>
