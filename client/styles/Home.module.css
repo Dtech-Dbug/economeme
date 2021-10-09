@@ -51,7 +51,7 @@
 .homeScreen {
   position: relative;
   background-color: var(--primary-color);
-  height: 90vh;
+  height: 92vh;
   display: flex;
   justify-content: center;
   align-items: center;
