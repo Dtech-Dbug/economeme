@@ -49,6 +49,15 @@ const Nav = () => {
     // });
   };
 
+  const logout = async (e) => {
+    dispatch({
+      type: "USER_LOGGED_OUT",
+      payload: null,
+    });
+
+    Router.push("/");
+  };
+
   return (
     <nav className={styles.nav}>
       {!user && (
@@ -70,7 +79,7 @@ const Nav = () => {
       {user && (
         <ul>
           <li>
-            <SecondaryBtn text="Logout" />
+            <SecondaryBtn text="Logout" logout={logout} />
           </li>
           <li>
             <SecondaryBtn text="+ Meme" />
