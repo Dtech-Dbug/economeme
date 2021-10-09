@@ -59,7 +59,7 @@ const Nav = () => {
   };
 
   const createMeme = async (e) => {
-    Router.push("/create-meme");
+    Router.push("/createMeme");
   };
 
   return (
