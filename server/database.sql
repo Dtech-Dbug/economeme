@@ -7,6 +7,6 @@ CREATE TABLE MemeCategories(
 
 CREATE TABLE USERS(
     id SERIAL PRIMARY KEY,
-    name VARCHAR,
-    email VARCHAR,
+    userName VARCHAR,
+    email VARCHAR
 );
