@@ -31,10 +31,8 @@ exports.getAllCategories = async (req, res) => {
 exports.deleteCategory = async (req, res) => {
   const { id } = req.params;
   try {
-    const DELETE = `DELETE FROM memecategories WHERE category_id $1`;
-
     const deletCategory = await pool.query(
-      `DELETE FROM memecategories WHERE category_id}`,
+      `DELETE FROM memecategories WHERE category_id=($1)`,
       [id]
     );
 
