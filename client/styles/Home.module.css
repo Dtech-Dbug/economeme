@@ -34,16 +34,13 @@
   outline: none;
   height: var(--primaryBtn-height);
   width: 100%;
-  background-color: red;
-}
-
-.container {
-  background-color: crimson;
+  background-color: var(--secondary-color);
+  color: black;
 }
 
 .homeScreen {
   position: relative;
-  background-color: darkgoldenrod;
+  background-color: var(--primary-color);
   height: 100vh;
   display: flex;
   justify-content: center;
