@@ -100,11 +100,13 @@
 }
 
 .formContainer {
-  border: 2px solid black;
-  height: 10rem;
+  border: 2px solid white;
+  height: 15rem;
   width: 90%;
   margin: auto;
-  background-color: yellow;
+  box-shadow: 2px 2px 2px black;
+  display: flex;
+  flex-direction: column;
 }
 .formContainer select {
   width: 100%;
