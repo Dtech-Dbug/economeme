@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
 
-const PrimartBtn = () => {
-  return <button>hello</button>;
+const PrimaryBtn = () => {
+  return <button className={styles.primaryBtn}>hello</button>;
 };
 
-export default PrimartBtn;
+export default PrimaryBtn;
