@@ -17,6 +17,7 @@
 }
 .nav h2 {
   color: red;
+  font-size: var(--header-font-size);
 }
 
 .nav ul {
@@ -24,6 +25,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
+  font-size: var(--list-font-size);
 }
 
 .primaryBtn {
