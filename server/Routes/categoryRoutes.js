@@ -2,6 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 //controllers
+const {
+  createCategory,
+  getAllCategories,
+  editCategory,
+  deleteCategory,
+} = require("../Controllers/categoryControllers");
 
 //create
 router.post("/create", createCategory);
