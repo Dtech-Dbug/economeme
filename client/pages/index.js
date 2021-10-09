@@ -24,7 +24,7 @@ export default function Home() {
 
         <ul>
           <li>
-            <PrimaryBtn handleSignup={signUp} text="Login" />
+            <PrimaryBtn handleSignup={signUp} text="Browse 🤡" />
           </li>
           <li>
             {" "}
