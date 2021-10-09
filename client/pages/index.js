@@ -4,8 +4,19 @@ import SignUp from "../Components/SignUp";
 import PrimaryBtn from "../Components/UIblocks/PrimaryBtn";
 import SecondaryBtn from "../Components/UIblocks/SecondaryBtn";
 import styles from "../styles/Home.module.css";
+import { auth, googleAuthProvider, Provider } from "../firebase";
+import { signInWithPopup } from "@firebase/auth";
 
 export default function Home() {
+  const signUp = async (e) => {
+    e.preventDefault();
+    console.log("jj");
+    console.log(auth);
+    const user = signInWithPopup(auth, Provider);
+    user.then((res) => {
+      console.log("user signed iup-->", res);
+    });
+  };
   return (
     <div className={styles.homeScreen}>
       <div className={styles.homeScreenContainer}>
@@ -13,7 +24,7 @@ export default function Home() {
 
         <ul>
           <li>
-            <PrimaryBtn text="Login" />
+            <PrimaryBtn handleSignup={signUp} text="Login" />
           </li>
           <li>
             {" "}
@@ -21,6 +32,8 @@ export default function Home() {
           </li>
         </ul>
       </div>
+
+      {console.log(googleAuthProvider)}
     </div>
   );
 }
