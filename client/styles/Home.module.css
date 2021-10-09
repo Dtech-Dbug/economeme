@@ -74,3 +74,16 @@
 .homeScreenContainer ul li {
   padding-bottom: 3rem;
 }
+
+/* memetag */
+.memetag {
+  background-color: var(--secondary-color);
+  width: 20%;
+  height: 2rem;
+  border-radius: 0.75rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--primary-padding);
+}
