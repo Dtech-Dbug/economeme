@@ -58,6 +58,10 @@ const Nav = () => {
     Router.push("/");
   };
 
+  const createMeme = async (e) => {
+    Router.push("/create-meme");
+  };
+
   return (
     <nav className={styles.nav}>
       {!user && (
@@ -82,7 +86,7 @@ const Nav = () => {
             <SecondaryBtn text="Logout" logout={logout} />
           </li>
           <li>
-            <SecondaryBtn text="+ Meme" />
+            <SecondaryBtn createMeme={createMeme} text="+ Meme" />
           </li>
         </ul>
       )}
