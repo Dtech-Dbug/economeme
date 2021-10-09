@@ -15,3 +15,7 @@ const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`running on port = ${PORT}`);
 });
+
+fs.readdirSync("./Routes").map((route) => {
+  app.use("/api", require("./Routes/" + route));
+});
