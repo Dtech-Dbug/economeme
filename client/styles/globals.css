@@ -1,3 +1,7 @@
+:root {
+  --primary-padding: 1rem;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
