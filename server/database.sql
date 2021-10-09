@@ -1,0 +1,12 @@
+CREATE DATABASE Pern;
+
+CREATE TABLE MemeCategories(
+  category_id SERIAL PRIMARY KEY,
+  title VARCHAR(255)
+);
+
+CREATE TABLE USERS(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    email VARCHAR,
+);
