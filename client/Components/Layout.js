@@ -40,8 +40,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Nav />
-      <div className={styles.container}>{children}</div>
+      <div className={styles.layout}>
+        <Nav />
+        <div className={styles.container}>{children}</div>
+      </div>
     </>
   );
 };
