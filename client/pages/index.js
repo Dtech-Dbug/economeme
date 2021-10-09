@@ -4,7 +4,7 @@ import SignUp from "../Components/SignUp";
 import PrimaryBtn from "../Components/UIblocks/PrimaryBtn";
 import SecondaryBtn from "../Components/UIblocks/SecondaryBtn";
 import styles from "../styles/Home.module.css";
-import { auth, googleAuthProvider, Provider } from "../firebase";
+import { auth, Provider } from "../firebase";
 import { signInWithPopup } from "@firebase/auth";
 
 export default function Home() {
@@ -32,8 +32,6 @@ export default function Home() {
           </li>
         </ul>
       </div>
-
-      {console.log(googleAuthProvider)}
     </div>
   );
 }
