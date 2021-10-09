@@ -6,11 +6,13 @@ import { signInWithPopup } from "@firebase/auth";
 import signup from "../pages/signup";
 
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { createUser } from "../Functions/user";
 import Router from "next/router";
 
 const Nav = () => {
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => ({ ...state }));
 
   const signUp = async (e) => {
     e.preventDefault();
@@ -50,17 +52,32 @@ const Nav = () => {
 
   return (
     <nav className={styles.nav}>
-      <h2>SignUp/SignIn to upload your memes</h2>
+      {!user && (
+        <>
+          <h2>SignUp/SignIn to upload your memes</h2>
 
-      <ul>
-        <li>
-          <SecondaryBtn signup={signUp} text="SignUp" />
-        </li>
-        <li>
-          {" "}
-          <SecondaryBtn text="SignIn" />
-        </li>
-      </ul>
+          <ul>
+            <li>
+              <SecondaryBtn signup={signUp} text="SignUp" />
+            </li>
+            <li>
+              {" "}
+              <SecondaryBtn text="SignIn" />
+            </li>
+          </ul>
+        </>
+      )}
+
+      {user && (
+        <ul>
+          <li>
+            <SecondaryBtn text="Logout" />
+          </li>
+          <li>
+            <SecondaryBtn text="+ Meme" />
+          </li>
+        </ul>
+      )}
     </nav>
   );
 };
