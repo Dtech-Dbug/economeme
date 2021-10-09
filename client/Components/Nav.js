@@ -11,7 +11,10 @@ const Nav = () => {
         <li>
           <SecondaryBtn text="SignUp" />
         </li>
-        <li>Browse</li>
+        <li>
+          {" "}
+          <SecondaryBtn text="SignIn" />
+        </li>
       </ul>
     </nav>
   );
