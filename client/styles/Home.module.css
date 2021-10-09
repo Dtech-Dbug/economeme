@@ -28,5 +28,7 @@
 
 .primaryBtn {
   border: 0.75rem;
-  height: var(--primaryBtn);
+  height: var(--primaryBtn-height);
+  width: var(--primaryBtn-width);
+  background-color: red;
 }
