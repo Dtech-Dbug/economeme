@@ -48,3 +48,19 @@ exports.deleteUser = async (req, res) => {
     console.log("err", error.message);
   }
 };
+
+//get details of user from req.header token
+exports.currentUser = async (req, res) => {
+  try {
+    console.log("token", req.user.email);
+    const currentLoggedInUser = await pool.query(
+      "SELECT * FROM users WHERE email=$1",
+      [req.user.email]
+    );
+
+    res.json(currentLoggedInUser.rows);
+    console.log("current-->", currentLoggedInUser.rows);
+  } catch (error) {
+    console.log("err whike checking curreny user", error.message);
+  }
+};
