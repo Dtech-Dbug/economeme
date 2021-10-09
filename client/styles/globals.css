@@ -8,6 +8,7 @@
   --primary-color: #941f4e;
   --secondary-color: #7d2a7e;
   --primary-btn-color: black;
+  --secondary-btn-width: 5rem;
 }
 
 * {
@@ -18,6 +19,7 @@
 
 html,
 body {
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
