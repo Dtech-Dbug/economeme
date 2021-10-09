@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-const PORT = 5000;
+const PORT = 8000;
 
 app.listen(PORT, () => {
   console.log(`running on port = ${PORT}`);
