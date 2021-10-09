@@ -4,5 +4,16 @@ import SignUp from "../Components/SignUp";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  return <></>;
+  return (
+    <div className={styles.homeScreen}>
+      <div className={styles.homeScreenContainer}>
+        <h2>economeme</h2>
+
+        <ul>
+          <li>hello</li>
+          <li>hello</li>
+        </ul>
+      </div>
+    </div>
+  );
 }
