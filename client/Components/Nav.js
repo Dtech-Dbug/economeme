@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
+import SecondaryBtn from "./UIblocks/SecondaryBtn";
 
 const Nav = () => {
   return (
     <nav className={styles.nav}>
-      <h2>economeme</h2>
+      <h2>SignUp/Login to upload your memes</h2>
 
       <ul>
-        <li>About</li>
+        <li>
+          <SecondaryBtn text="SignUp" />
+        </li>
         <li>Browse</li>
       </ul>
     </nav>
