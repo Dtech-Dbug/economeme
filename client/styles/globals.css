@@ -1,6 +1,7 @@
 :root {
   --primary-padding: 1rem;
-  --primaryBtn: 1rem;
+  --primaryBtn-height: 1.5rem;
+  --primaryBtn-width: 3rem;
 }
 
 * {
