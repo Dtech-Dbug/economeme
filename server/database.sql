@@ -14,5 +14,6 @@ CREATE TABLE USERS(
 CREATE TABLE MEMESTORAGE(
   id SERIAL PRIMARY KEY,
   src VARCHAR,
+  category VARCHAR,
   parent_id INT REFERENCES MemeCategories (category_id)
 );
