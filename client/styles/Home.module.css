@@ -25,3 +25,8 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.primaryBtn {
+  border: 0.75rem;
+  height: var(--primaryBtn);
+}
