@@ -14,8 +14,13 @@ const feed = () => {
 
   return (
     <>
-      <Memetag />
-      {JSON.stringify(categories)}
+      {categories.map((item) => {
+        return (
+          <div>
+            <Memetag memeType={item.title} />
+          </div>
+        );
+      })}
     </>
   );
 };
