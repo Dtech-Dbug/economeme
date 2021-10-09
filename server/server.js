@@ -12,6 +12,6 @@ app.use(express.json());
 //routes
 const PORT = 5000;
 
-app.listen("/", () => {
+app.listen(PORT, () => {
   console.log(`running on port = ${PORT}`);
 });
