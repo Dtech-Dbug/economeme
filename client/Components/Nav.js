@@ -5,15 +5,33 @@ import { auth, Provider } from "../firebase";
 import { signInWithPopup } from "@firebase/auth";
 import signup from "../pages/signup";
 
+import { useDispatch } from "react-redux";
+
 const Nav = () => {
+  const dispatch = useDispatch();
+
   const signUp = async (e) => {
     e.preventDefault();
-    console.log("jj");
-    console.log(auth);
-    const user = signInWithPopup(auth, Provider);
-    user.then((res) => {
-      console.log("user signed iup-->", res);
+
+    //async function to get result after signup
+    const result = await signInWithPopup(auth, Provider);
+    const { user } = result;
+    const userIdToken = await user.getIdTokenResult();
+
+    console.log("user", user.displayName, userIdToken.token);
+
+    dispatch({
+      type: "USER_LOGGED_IN",
+      payload: {
+        name: user.displayName,
+        email: user.email,
+        token: userIdToken.token,
+      },
     });
+
+    // user.then((res) => {
+    //   console.log("user signed iup-->", res);
+    // });
   };
 
   return (
