@@ -60,3 +60,17 @@ exports.editCategory = async (req, res) => {
     console.log("error while editing:", error.message);
   }
 };
+
+//get details of user from req.header token
+exports.currentUser = async (req, res) => {
+  try {
+    const currentLoggedInUser = await pool.query(
+      "SELECT FROM users WHERE email=$1",
+      [req.headers.token]
+    );
+
+    res.json(currentLoggedInUser);
+  } catch (error) {
+    console.log("err whike checking curreny user", error.message);
+  }
+};
