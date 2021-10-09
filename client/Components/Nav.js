@@ -7,12 +7,10 @@ import signup from "../pages/signup";
 
 import { useDispatch } from "react-redux";
 import { createUser } from "../Functions/user";
-// import { useHistory } from "react-router-dom";
 import Router from "next/router";
 
 const Nav = () => {
   const dispatch = useDispatch();
-  // const history = useHistory();
 
   const signUp = async (e) => {
     e.preventDefault();
