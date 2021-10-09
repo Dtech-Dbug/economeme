@@ -86,4 +86,10 @@
   justify-content: center;
   align-items: center;
   margin-top: var(--primary-padding);
+  margin-inline: 0.5rem;
+}
+
+.memetagContainer {
+  display: flex;
+  flex-wrap: wrap;
 }

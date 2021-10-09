@@ -3,6 +3,7 @@ import Memetag from "../Components/UIblocks/Memetag";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { getCategories } from "../Functions/categories";
+import styles from "../styles/Home.module.css";
 
 const feed = () => {
   const [categories, setCategoroies] = useState([]);
@@ -14,13 +15,12 @@ const feed = () => {
 
   return (
     <>
-      {categories.map((item) => {
-        return (
-          <div>
-            <Memetag memeType={item.title} />
-          </div>
-        );
-      })}
+      {" "}
+      <div className={styles.memetagContainer}>
+        {categories.map((item) => {
+          return <Memetag memeType={item.title} />;
+        })}
+      </div>
     </>
   );
 };
