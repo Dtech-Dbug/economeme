@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import SignUp from "../Components/SignUp";
 import PrimaryBtn from "../Components/UIblocks/PrimaryBtn";
+import SecondaryBtn from "../Components/UIblocks/SecondaryBtn";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -12,9 +13,12 @@ export default function Home() {
 
         <ul>
           <li>
-            <PrimaryBtn />
+            <PrimaryBtn text="Login" />
           </li>
-          <li>hello</li>
+          <li>
+            {" "}
+            <SecondaryBtn text="Browse" />
+          </li>
         </ul>
       </div>
     </div>

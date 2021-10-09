@@ -37,7 +37,14 @@
   background-color: var(--secondary-color);
   color: black;
 }
-
+.secondaryBtn {
+  background-color: var(--primary-color);
+  border-radius: 0.75rem;
+  outline: none;
+  height: var(--primaryBtn-height);
+  width: 100%;
+  fill-opacity: 9px;
+}
 .homeScreen {
   position: relative;
   background-color: var(--primary-color);
