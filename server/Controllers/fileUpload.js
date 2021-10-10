@@ -27,4 +27,6 @@ exports.getMemes = async (req, res) => {
     "SELECT * FROM memestorage WHERE category=$1",
     [req.params.category]
   );
+
+  res.json(memes.row);
 };
