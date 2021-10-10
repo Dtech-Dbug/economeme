@@ -57,9 +57,10 @@ const createMeme = () => {
 
     console.table(values);
 
-    fileUpload(values, user.token).then((res) =>
-      console.log("res after uplaod,", res)
-    );
+    fileUpload(values, user.token).then((res) => {
+      window.location.reload();
+      console.log("res after uplaod,", res);
+    });
   };
   return (
     <>
