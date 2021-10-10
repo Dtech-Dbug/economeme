@@ -5,10 +5,9 @@ const router = express.Router();
 const { authMiddleware } = require("../Middlewares/auth");
 
 //controllers
+const { fileUpload } = require("../Controllers/fileUpload");
 
 //routes
-router.post("/fileupload", authMiddleware, (req, res) => {
-  console.log(req.file);
-});
+router.post("/fileupload", authMiddleware, fileUpload);
 
 module.exports = router;
