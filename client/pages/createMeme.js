@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import Resizer from "react-image-file-resizer";
 import { fileUpload } from "../Functions/fileUpload";
 
-const createMeme = () => {
+const CreateMeme = () => {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState("");
   const [url, setUrl] = useState("");
@@ -101,4 +101,4 @@ const createMeme = () => {
   );
 };
 
-export default createMeme;
+export default CreateMeme;
