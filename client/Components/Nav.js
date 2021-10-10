@@ -81,14 +81,21 @@ const Nav = () => {
       )}
 
       {user && (
-        <ul>
-          <li>
-            <SecondaryBtn text="Logout" logout={logout} />
-          </li>
-          <li>
-            <SecondaryBtn createMeme={createMeme} text="+ Meme" />
-          </li>
-        </ul>
+        <>
+          <div className={styles.welcome}>
+            <img src={user.photo} alt="oops" />
+            <h2>Welcome {user.name}</h2>
+          </div>
+
+          <ul>
+            <li>
+              <SecondaryBtn text="Logout" logout={logout} />
+            </li>
+            <li>
+              <SecondaryBtn createMeme={createMeme} text="+ Meme" />
+            </li>
+          </ul>
+        </>
       )}
     </nav>
   );
