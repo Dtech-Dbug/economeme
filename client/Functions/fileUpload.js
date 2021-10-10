@@ -9,3 +9,5 @@ export const fileUpload = async (values, authtoken) => {
     },
   });
 };
+
+export const getMemes = async () => await axios.get(`${HOST}/allMemes`);
