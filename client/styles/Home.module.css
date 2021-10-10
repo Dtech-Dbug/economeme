@@ -155,10 +155,9 @@
   font-family: var(--body-font);
   font-size: 0.6rem;
   color: var(--primary-color);
-
-  padding-left: 0.5rem;
-  margin-top: 0.5rem;
+  text-align: center;
   margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
   /* word-spacing: 9px; */
   /* letter-spacing: 3px; */
 }
