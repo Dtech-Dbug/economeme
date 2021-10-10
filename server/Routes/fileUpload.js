@@ -12,4 +12,6 @@ router.post("/fileupload", authMiddleware, fileUpload);
 
 router.get("/allMemes", getAllMemes);
 
+//get memes baes on category
+
 module.exports = router;
