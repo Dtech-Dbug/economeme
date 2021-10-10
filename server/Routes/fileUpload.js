@@ -13,6 +13,6 @@ router.post("/fileupload", authMiddleware, fileUpload);
 router.get("/allMemes", getAllMemes);
 
 //get memes baes on category
-router.get("/meme/:id", getMemes);
+router.get("/meme/:category", getMemes);
 
 module.exports = router;

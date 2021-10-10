@@ -14,3 +14,17 @@ exports.fileUpload = async (req, res) => {
     console.log("error while saving meme in db", error.message);
   }
 };
+
+exports.getAllMemes = async (req, res) => {
+  const allMemes = await pool.query("SELECT * FROM memestorage");
+
+  res.json(allMemes.rows);
+};
+
+//memes based on specific route
+exports.getMemes = async (req, res) => {
+  const memes = await pool.query(
+    "SELECT * FROM memestrorage WHERE category=$1",
+    [req.params.category]
+  );
+};
