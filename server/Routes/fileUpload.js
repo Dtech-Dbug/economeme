@@ -5,7 +5,11 @@ const router = express.Router();
 const { authMiddleware } = require("../Middlewares/auth");
 
 //controllers
-const { fileUpload } = require("../Controllers/fileUpload");
+const {
+  fileUpload,
+  getAllMemes,
+  getMemes,
+} = require("../Controllers/fileUpload");
 
 //routes
 router.post("/fileupload", authMiddleware, fileUpload);
