@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
 
-const PrimaryBtn = ({ text, handleSignup }) => {
+const PrimaryBtn = ({ text, handleSignup, routeToBrowse }) => {
   return (
-    <button onClick={handleSignup} className={styles.primaryBtn}>
+    <button onClick={routeToBrowse} className={styles.primaryBtn}>
       {text}
     </button>
   );

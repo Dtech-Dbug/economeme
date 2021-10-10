@@ -3,8 +3,13 @@ import Image from "next/image";
 import PrimaryBtn from "../Components/UIblocks/PrimaryBtn";
 import SecondaryBtn from "../Components/UIblocks/SecondaryBtn";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import Router from "next/router";
 
 export default function Home() {
+  const routeToBrowse = () => {
+    Router.push("/feed");
+  };
   return (
     <div className={styles.homeScreen}>
       <div className={styles.homeScreenContainer}>
@@ -12,7 +17,9 @@ export default function Home() {
 
         <ul>
           <li>
-            <PrimaryBtn text="Browse 🤡" />
+            <Link href="/feed">
+              <PrimaryBtn routeToBrowse={routeToBrowse} text="Browse 🤡" />
+            </Link>
           </li>
         </ul>
       </div>
