@@ -162,3 +162,18 @@
   /* word-spacing: 9px; */
   /* letter-spacing: 3px; */
 }
+
+/* welcome styles avatr */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-bottom: var(--primary-padding);
+}
+.welcome img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: var(--primary-padding);
+}

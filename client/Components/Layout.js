@@ -27,6 +27,7 @@ const Layout = ({ children }) => {
               token: userIdToken.token,
               name: user.displayName,
               id: res.data.id,
+              photo: user.photoURL,
               // name: res.data.name,
               // id: res.data.id,
             },
