@@ -5,8 +5,9 @@ import { getCategories } from "../Functions/categories";
 import { useSelector } from "react-redux";
 import Resizer from "react-image-file-resizer";
 import { fileUpload } from "../Functions/fileUpload";
+import Router from "next/router";
 
-const CreateMeme = () => {
+const createMeme = () => {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState("");
   const [url, setUrl] = useState("");
@@ -58,47 +59,50 @@ const CreateMeme = () => {
     console.table(values);
 
     fileUpload(values, user.token).then((res) => {
-      window.location.reload();
+      // window.location.reload();
       console.log("res after uplaod,", res);
+      Router.push("/feed");
     });
   };
   return (
     <>
-      <h2 style={{ textAlign: "center" }}>Share the Laughter</h2>
-      <form
-        action="http://localhost:8000/api/fileupload"
-        method="post"
-        className={styles.formContainer}
-      >
-        <label htmlFor="Select">
-          Select a category
-          <select name="" id="" onChange={handleCategoryChange}>
-            {categories.map((item) => (
-              <>
-                <option key={item.id} value={item.title}>
-                  {item.title}
-                </option>
-              </>
-            ))}
-          </select>
-        </label>
-        <br />
-
-        <label
-          htmlFor="
-      "
+      <div className={styles.createMeme}>
+        <h2 style={{ textAlign: "center" }}>Share the Laughter</h2>
+        <form
+          action="http://localhost:8000/api/fileupload"
+          method="post"
+          className={styles.formContainer}
         >
-          {" "}
-          Upload meme
-          <input onChange={fileUploadAndResize} type="file" />
-        </label>
+          <label htmlFor="Select">
+            Select a category
+            <select name="" id="" onChange={handleCategoryChange}>
+              {categories.map((item) => (
+                <>
+                  <option key={item.id} value={item.title}>
+                    {item.title}
+                  </option>
+                </>
+              ))}
+            </select>
+          </label>
+          <br />
 
-        <br />
+          <label
+            htmlFor="
+      "
+          >
+            {" "}
+            Upload meme
+            <input onChange={fileUploadAndResize} type="file" />
+          </label>
 
-        <button onClick={test}>Submit</button>
-      </form>
+          <br />
+
+          <button onClick={test}>Submit</button>
+        </form>
+      </div>
     </>
   );
 };
 
-export default CreateMeme;
+export default createMeme;
