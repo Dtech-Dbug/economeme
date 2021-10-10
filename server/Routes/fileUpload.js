@@ -10,4 +10,6 @@ const { fileUpload } = require("../Controllers/fileUpload");
 //routes
 router.post("/fileupload", authMiddleware, fileUpload);
 
+router.get("/allMemes", getAllMemes);
+
 module.exports = router;
