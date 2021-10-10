@@ -24,7 +24,7 @@ exports.getAllMemes = async (req, res) => {
 //memes based on specific route
 exports.getMemes = async (req, res) => {
   const memes = await pool.query(
-    "SELECT * FROM memestrorage WHERE category=$1",
+    "SELECT * FROM memestorage WHERE category=$1",
     [req.params.category]
   );
 };
