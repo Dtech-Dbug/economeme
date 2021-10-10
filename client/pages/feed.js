@@ -25,7 +25,7 @@ const Feed = () => {
       {" "}
       <div className={styles.memetagContainer}>
         {categories.map((item) => {
-          return <Memetag memeType={item.title} />;
+          return <Memetag key={item.id} memeType={item.title} />;
         })}
       </div>
       {memes.map((item) => (
