@@ -8,7 +8,7 @@ import { getMemes } from "../Functions/fileUpload";
 import ImageGrid from "../Components/Card";
 import CARD from "../Components/Card";
 
-const feed = () => {
+const Feed = () => {
   const [categories, setCategoroies] = useState([]);
   const [memes, setMemes] = useState([]);
 
@@ -35,4 +35,4 @@ const feed = () => {
   );
 };
 
-export default feed;
+export default Feed;
