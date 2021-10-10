@@ -98,6 +98,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.createMeme {
+  height: 100vh;
+}
 
 .formContainer {
   border: 2px solid white;
