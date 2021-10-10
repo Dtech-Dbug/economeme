@@ -29,7 +29,7 @@ const feed = () => {
         })}
       </div>
       {memes.map((item) => (
-        <CARD src={item.src} category={item.category} />
+        <CARD key={item.id} src={item.src} category={item.category} />
       ))}
     </>
   );

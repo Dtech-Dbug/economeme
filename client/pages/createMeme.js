@@ -68,7 +68,6 @@ const createMeme = () => {
       <form
         action="http://localhost:8000/api/fileupload"
         method="post"
-        enctype="multipart/form-data"
         className={styles.formContainer}
       >
         <label htmlFor="Select">
