@@ -21,6 +21,10 @@ export default function Home() {
               <PrimaryBtn routeToBrowse={routeToBrowse} text="Browse 🤡" />
             </Link>
           </li>
+
+          <li>
+            <SecondaryBtn text="Signin" />
+          </li>
         </ul>
       </div>
     </div>

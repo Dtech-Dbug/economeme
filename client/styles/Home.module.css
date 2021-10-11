@@ -46,16 +46,17 @@
   outline: none;
   height: var(--primaryBtn-height);
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: white;
 }
 .secondaryBtn {
   background-color: transparent;
-  border: 1px solid black;
+  color: white;
+  border: 1px solid var(--secondary-color);
   border-radius: 0.75rem;
   outline: none;
   height: var(--primaryBtn-height);
-  width: var(--secondary-btn-width);
+  width: 100%;
   font-size: 0.8rem;
   margin-right: var(--primary-padding);
 }
