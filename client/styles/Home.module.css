@@ -4,9 +4,15 @@
     flex-direction: column;
   }
 }
+.layoutContainer {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #fc466b, #3f5efb);
+  padding: 0.3rem;
+}
 
 .layout {
-  background-color: var(--primary-color);
+  background-color: black;
   height: 100%;
 }
 
@@ -55,11 +61,11 @@
 }
 .homeScreen {
   position: relative;
-  background-color: var(--primary-color);
-  height: 92vh;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .homeScreenContainer {

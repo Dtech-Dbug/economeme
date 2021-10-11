@@ -41,9 +41,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className={styles.layout}>
-        <Nav />
-        <div className={styles.container}>{children}</div>
+      <div className={styles.layoutContainer}>
+        <div className={styles.layout}>
+          {/* <Nav /> */}
+          <div className={styles.container}>{children}</div>
+        </div>
       </div>
     </>
   );
