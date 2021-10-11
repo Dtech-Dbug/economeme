@@ -25,6 +25,10 @@ export default function Home() {
           <li>
             <SecondaryBtn text="Signin" />
           </li>
+          <figcaption>
+            To create an account{" "}
+            <span style={{ textDecoration: "underline" }}>Signup</span>{" "}
+          </figcaption>
         </ul>
       </div>
     </div>
