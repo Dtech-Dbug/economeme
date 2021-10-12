@@ -14,6 +14,7 @@
 .layout {
   background-color: black;
   height: 100%;
+  border-radius: 0.75rem;
 }
 
 .nav {
@@ -66,7 +67,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 99vh;
 }
 
 .homeScreenContainer {
@@ -76,12 +77,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .homeScreenContainer ul {
   list-style: none;
   text-align: center;
   margin-bottom: var(--primary-padding);
+}
+.homeScreenContainer h2 {
+  background: -webkit-linear-gradient(
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .homeScreenContainer ul li {
   padding-bottom: 2rem;
