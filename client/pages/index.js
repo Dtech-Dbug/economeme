@@ -5,6 +5,7 @@ import SecondaryBtn from "../Components/UIblocks/SecondaryBtn";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Router from "next/router";
+import TypewriterComponent from "../Components/Typewriter";
 
 export default function Home() {
   const routeToBrowse = () => {
@@ -13,7 +14,10 @@ export default function Home() {
   return (
     <div className={styles.homeScreen}>
       <div className={styles.homeScreenContainer}>
-        <h2>economeme</h2>
+        <div className={styles.welcomeText}>
+          <h2>economeme</h2>
+          <TypewriterComponent text="Share the Laughter" />
+        </div>
 
         <ul>
           <li>
