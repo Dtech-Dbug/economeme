@@ -85,6 +85,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .homeScreenContainer ul {
   list-style: none;
   text-align: center;
@@ -97,6 +98,7 @@
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: var(--logo-font);
 }
 .homeScreenContainer ul li {
   padding-bottom: 2rem;
