@@ -8,6 +8,11 @@ import Router from "next/router";
 import TypewriterComponent from "../Components/Typewriter";
 
 export default function Home() {
+  const text = [
+    "<strong>Divided By Languages...<strong>",
+    "<strong>United By Laughter<strong>",
+    "<strong>Share the Laughter<strong>",
+  ];
   const routeToBrowse = () => {
     Router.push("/feed");
   };
@@ -16,7 +21,7 @@ export default function Home() {
       <div className={styles.homeScreenContainer}>
         <div className={styles.welcomeText}>
           <h2>economeme</h2>
-          <TypewriterComponent text="Share the Laughter" />
+          <TypewriterComponent text={text} />
         </div>
 
         <ul>
