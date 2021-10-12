@@ -79,7 +79,12 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.welcomeText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .homeScreenContainer ul {
   list-style: none;
   text-align: center;
