@@ -13,7 +13,7 @@
 
 .layout {
   background-color: black;
-  height: 100%;
+  height: 100vh;
   border-radius: 0.75rem;
 }
 
@@ -106,16 +106,22 @@
 
 /* memetag */
 .memetag {
-  background-color: var(--secondary-color);
-  width: 25%;
+  border: 2px solid var(--secondary-color);
+  color: white;
+  width: 20%;
+  font-size: 80%;
+  object-fit: contain;
   height: 2rem;
   border-radius: 0.75rem;
-  font-size: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: var(--primary-padding);
+  margin-block: var(--primary-padding);
   margin-inline: 0.5rem;
+}
+
+.memeTagTextContent {
+  font-size: 80%;
 }
 
 .memetagContainer {
