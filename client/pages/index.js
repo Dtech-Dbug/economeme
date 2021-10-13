@@ -9,9 +9,9 @@ import TypewriterComponent from "../Components/Typewriter";
 
 export default function Home() {
   const text = [
-    "<strong>Divided By Languages...<strong>",
-    "<strong>United By Laughter<strong>",
-    "<strong>Share the Laughter<strong>",
+    "<strong>divided by languages...<strong>",
+    "<strong>united by laughter<strong>",
+    "<strong>share the laughter<strong>",
   ];
   const routeToBrowse = () => {
     Router.push("/feed");
