@@ -28,9 +28,13 @@ const feed = () => {
           return <Memetag key={item.id} memeType={item.title} />;
         })}
       </div>
-      {memes.map((item) => (
-        <CARD key={item.id} src={item.src} category={item.category} />
-      ))}
+      <div className={styles.grid}>
+        <div className={styles.gridItem}>
+          {memes.map((item) => (
+            <CARD key={item.id} src={item.src} category={item.category} />
+          ))}
+        </div>
+      </div>
     </>
   );
 };
