@@ -5,7 +5,7 @@ function CARD({ src, category }) {
     <>
       <div className={styles.cardContainer}>
         {/* <img src="" height={150} width={150} alt="oop" /> */}
-        <img className={styles.cardVideo} src={src} frameBorder="0"></img>
+        <img className={styles.img} src={src}></img>
 
         <figcaption>
           <h3 className={styles.cardInfo}>
