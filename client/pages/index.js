@@ -27,15 +27,15 @@ export default function Home() {
         <ul>
           <li>
             <Link href="/feed">
-              <PrimaryBtn routeToBrowse={routeToBrowse} text="Browse 🤡" />
+              <PrimaryBtn routeToBrowse={routeToBrowse} text="browse 🤡" />
             </Link>
           </li>
 
           <li>
-            <SecondaryBtn text="Signin" />
+            <SecondaryBtn text="signin" />
           </li>
           <figcaption>
-            To create an account{" "}
+            to create an account{" "}
             <span style={{ textDecoration: "underline" }}>Signup</span>{" "}
           </figcaption>
         </ul>
