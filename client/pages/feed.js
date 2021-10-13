@@ -29,11 +29,19 @@ const feed = () => {
         })}
       </div>
       <div className={styles.grid}>
-        <div className={styles.gridItem}>
-          {memes.map((item) => (
-            <CARD key={item.id} src={item.src} category={item.category} />
-          ))}
-        </div>
+        {memes.map((item) => (
+          <div className={styles.gridItem}>
+            <img
+              className={styles.img}
+              key={item.id}
+              src={item.src}
+              category={item.category}
+            />
+            {/* <figcaption className={styles.memeInfo}>
+              category : {item.category}
+            </figcaption> */}
+          </div>
+        ))}
       </div>
     </>
   );
