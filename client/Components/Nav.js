@@ -80,7 +80,7 @@ const Nav = () => {
         </>
       )}
 
-      {user && (
+      {/* {user && (
         <>
           <div className={styles.welcome}>
             <img src={user.photo} alt="oops" />
@@ -96,7 +96,7 @@ const Nav = () => {
             </li>
           </ul>
         </>
-      )}
+      )} */}
     </nav>
   );
 };
