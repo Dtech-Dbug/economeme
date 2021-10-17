@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
     <>
       <div className={styles.layoutContainer}>
         <div className={styles.layout}>
-          {/* <Nav /> */}
+          <Nav />
           <div className={styles.container}>{children}</div>
         </div>
       </div>
