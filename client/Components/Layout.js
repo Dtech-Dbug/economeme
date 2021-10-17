@@ -1,13 +1,14 @@
 import styles from "../styles/Home.module.css";
 import Nav from "./Nav";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "@firebase/auth";
 import { auth } from "../firebase";
 import { currentUser } from "../Functions/user";
 
 const Layout = ({ children }) => {
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => ({ ...state }));
 
   // to check firebase auth state
   useEffect(() => {
@@ -43,7 +44,6 @@ const Layout = ({ children }) => {
     <>
       <div className={styles.layoutContainer}>
         <div className={styles.layout}>
-          <Nav />
           <div className={styles.container}>{children}</div>
         </div>
       </div>
