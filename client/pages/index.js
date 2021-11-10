@@ -7,6 +7,9 @@ import Link from "next/link";
 import Router from "next/router";
 import TypewriterComponent from "../Components/Typewriter";
 
+import { signInWithPopup } from "firebase/auth";
+import { auth, Provider } from "../firebase";
+
 export default function Home() {
   const text = [
     "<strong>divided by languages...<strong>",
@@ -15,6 +18,13 @@ export default function Home() {
   ];
   const routeToBrowse = () => {
     Router.push("/feed");
+  };
+
+  const signInUser = async (e) => {
+    e.preventDefault();
+    const user = await signInWithPopup(auth, Provider);
+
+    console.log("SIgned in user", user);
   };
   return (
     <div className={styles.homeScreen}>
@@ -31,7 +41,7 @@ export default function Home() {
             </Link>
           </li>
 
-          <li>
+          <li onClick={signInUser}>
             <SecondaryBtn text="signin" />
           </li>
           <figcaption>
