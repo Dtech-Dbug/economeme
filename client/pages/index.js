@@ -22,9 +22,19 @@ export default function Home() {
 
   const signInUser = async (e) => {
     e.preventDefault();
-    const user = await signInWithPopup(auth, Provider);
 
-    console.log("SIgned in user", user);
+    try {
+      // fetching user creds
+      const signInResult = await signInWithPopup(auth, Provider);
+
+      //destructuring user details from the entire object
+      const { user } = signInResult;
+      const userToken = await user.getIdTokenResult();
+
+      Router.push("/feed");
+    } catch (error) {
+      alert(error.message);
+    }
   };
   return (
     <div className={styles.homeScreen}>
