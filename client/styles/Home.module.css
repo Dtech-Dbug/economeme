@@ -171,30 +171,6 @@
 }
 
 /*  ? CARD  */
-.cardContainer {
-  position: relative;
-  background-color: #222222;
-  height: var(--card-dimension);
-  width: var(--card-dimension);
-  border-radius: 0.74rem;
-  margin: 1rem 1rem;
-}
-
-.cardVideo {
-  height: 12rem;
-  width: 100%;
-  padding: 0.5rem 0.5rem;
-}
-.cardInfo {
-  font-family: var(--body-font);
-  font-size: 0.6rem;
-  color: var(--primary-color);
-  text-align: center;
-  margin-bottom: 0.5rem;
-  margin-top: -0.5rem;
-  /* word-spacing: 9px; */
-  /* letter-spacing: 3px; */
-}
 
 /* welcome styles avatr */
 .welcome {
